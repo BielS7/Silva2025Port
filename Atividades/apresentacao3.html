@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apresentação - 3º Eixo</title>
+    <link rel="stylesheet" href="apresentacao.css">
+</head>
+<body>
+    
+</body>
+</html>
+<body>
+  <header>
+<nav>
+      <ul>
+        <li>
+            <a href="Atividades.html">Atividades</a>
+        </li>
+        <li>
+          <a href="eixo.html">Eixo</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="hero-section">
+    <div class="slides-container">
+
+      <!-- Slide 1(Eixo 1) -->
+      <div class="slide active">
+        <div class="image-container">
+          <img src="img/apresentação11.png" alt="My-Voacations" class="slide-image" />
+        </div>
+        <div class="content-container">
+          <p class="tag">Eixo 3</p>
+          <h1 class="title">Linguagens</h1>
+          <p class="description">Professora: Kércia Rimaelle- Data: 18/08/2025</p>
+          <p>Apresentação em Grupo</p>
+
+          <div class="right-arrows">
+            <button class="arrow-btn" id="prev" aria-label="Anterior">&#9664;</button>
+            <button class="arrow-btn" id="next" aria-label="Próximo">&#9654;</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 (Eixo 3) -->
+      <div class="slide">
+        <div class="image-container">
+          <img src="img/apresentação12.png" alt="Redação-Repertorio" class="slide-image" />
+        </div>
+        <div class="content-container">
+          <p class="tag">Eixo 3</p>
+          <h1 class="title">Humanas</h1>
+          <p class="description">Professora: Ileana Luz - Data: 12/08/2025</p>
+          <p>Apresentação em grupo.</p>
+
+          <div class="right-arrows">
+            <button class="arrow-btn" id="prev" aria-label="Anterior">&#9664;</button>
+            <button class="arrow-btn" id="next" aria-label="Próximo">&#9654;</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3 (Eixo 3)-->
+      <div class="slide">
+        <div class="image-container">
+          <img src="img/apresentação13.png" alt="3 fase-Modernismo" class="slide-image" />
+        </div>
+        <div class="content-container">
+          <p class="tag">Eixo 3</p>
+          <h1 class="title">Natureza</h1>
+          <p class="description">Professor: Wallace - Data: 04/08/2025</p>
+          <p>Apresentação em dupla.</p>
+
+          <div class="right-arrows">
+            <button class="arrow-btn" id="prev" aria-label="Anterior">&#9664;</button>
+            <button class="arrow-btn" id="next" aria-label="Próximo">&#9654;</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 4 (Eixo 3)-->
+      <div class="slide">
+        <div class="image-container">
+          <img src="img/apresentação14.png" alt="3 fase-Modernismo" class="slide-image" />
+        </div>
+        <div class="content-container">
+          <p class="tag">Eixo 3</p>
+          <h1 class="title">Matemática</h1>
+          <p class="description">Professora: Regiane Leal - Data: 05/08/2025</p>
+          <p>Lista de Questões</p>
+
+          <div class="right-arrows">
+            <button class="arrow-btn" id="prev" aria-label="Anterior">&#9664;</button>
+            <button class="arrow-btn" id="next" aria-label="Próximo">&#9654;</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 5 (Eixo 3)-->
+      <div class="slide">
+        <div class="image-container">
+          <img src="img/apresentação15.png" alt="3 fase-Modernismo" class="slide-image" />
+        </div>
+        <div class="content-container">
+          <p class="tag">Eixo 3</p>
+          <h1 class="title">Técnico Informática</h1>
+          <p class="description">Professor: Cleinton Jericó - Data: 01/08/2025</p>
+          <p>Criação Site e Simulação de Venda</p>
+
+          <div class="right-arrows">
+            <button class="arrow-btn" id="prev" aria-label="Anterior">&#9664;</button>
+            <button class="arrow-btn" id="next" aria-label="Próximo">&#9654;</button>
+          </div>
+        </div>
+      </div>
+
+  </main>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    let currentIndex = 0;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+      });
+    }
+
+    // Para que todas as setas funcionem (uma por slide)
+    document.querySelectorAll('#prev').forEach(btn => {
+      btn.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        showSlide(currentIndex);
+      });
+    });
+
+    document.querySelectorAll('#next').forEach(btn => {
+      btn.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
+      });
+    });
+
+    showSlide(currentIndex);
+  </script>
+</body>
+</html>
+
