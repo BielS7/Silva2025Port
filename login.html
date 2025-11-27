@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            margin: 0;
+            background-color: #0f172a; /* fundo principal */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        form {
+            width: 320px;
+            background-color: #1e293b; /* card */
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+            text-align: center;
+        }
+
+        h3 {
+            font-size: 28px;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 25px;
+        }
+
+        input {
+            display: block;
+            margin: 12px auto;
+            width: 100%;
+            height: 40px;
+            padding: 0 10px;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 15px;
+        }
+
+        input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        input[type="submit"] {
+            background-color: #0f172a;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #111827;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <form onsubmit="logar(); return false;">
+        <h3>LOGIN</h3>
+        <input type="text" placeholder="Usuário" id="Usuário">
+        <input type="password" placeholder="Senha" id="senha">
+        <input type="submit" value="Entrar">
+    </form>
+
+    <script>
+        function logar() {
+            var login = document.getElementById("Usuário").value;
+            var senha = document.getElementById("senha").value;
+
+            if (login === "admin" && senha === "admin") {
+                alert("Sucesso");
+                window.location.href = "index.html"; // Redireciona
+            } else {
+                alert("Alerta de segurança! Você acaba de aceita 12 ameaças ao seu dispositivo.");
+            }
+        }
+    </script>
+</body>
+</html>

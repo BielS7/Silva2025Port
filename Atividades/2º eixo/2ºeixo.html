@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2° Eixo</title>
+    <link rel="stylesheet" href="2ºeixo.css">
+    
+</head>
+    
+<body>
+    <h1>Atividades Desenvolvidas <br> No Segundo Eixo</h1>
+
+
+    <br><br>
+  <h2 onclick="toggleImagens(this)">Linguagens e Suas Tecnologias <span class="seta"></span></h2>
+  <div class="imagem-container oculto">
+  <div class="bloco">
+        <img src="linguens1.png" class="imagem">
+        <img src="linguagens2.png" class="imagem">
+        <img src="linguagens3.png" class="imagem">
+    </div>
+    </div>
+</section>
+
+  <h2 onclick="toggleImagens(this)">Humanas e Suas Tecnologias <span class="seta"></span></h2>
+  <div class="imagem-container oculto">
+  <div class="bloco">
+        <img src="humanas1.png" class="imagem">
+        <img src="humanas2.png" class="imagem">
+        <img src="humanas3.png" class="imagem">
+        <img src="humanas4.png" class="imagem">
+    </div>
+    </div>
+</section>
+
+
+  <h2 onclick="toggleImagens(this)">Natureza e Suas Tecnologias <span class="seta"></span></h2>
+  <div class="imagem-container oculto">
+  <div class="bloco">
+        <img src="natureza1.png" class="imagem">
+        <img src="natureza2.png" class="imagem">
+        <img src="natureza3.png" class="imagem">
+        <img src="humanas5.png" class="imagem">
+    </div>
+  </div>
+</section>
+
+
+  <h2 onclick="toggleImagens(this)">Matemática e Suas Tecnologias <span class="seta"></span></h2>
+  <div class="imagem-container oculto">
+  <div class="bloco">
+        <img src="matematica1.png" class="imagem">
+        <img src="matematica2.png" class="imagem">
+        <img src="matematica3.png" class="imagem">
+    </div>
+  </div>
+</section>
+
+  <h2 onclick="toggleImagens(this)">SENAI<span class="seta"></span></h2>
+  <div class="imagem-container oculto">
+  <div class="bloco">
+        <img src="senai1.png" class="imagem">
+        <img src="senai2.png" class="imagem">
+        <img src="senai3.png" class="imagem">
+        <img src="senai4.png" class="imagem">
+        <img src="senai5.png" class="imagem">
+        <img src="senai6.png" class="imagem">
+    </div>
+  </div>
+</section>
+
+<script>
+  function toggleImagens(titulo) {
+    const imagemContainer = titulo.nextElementSibling;
+    imagemContainer.classList.toggle("oculto");
+    titulo.classList.toggle("aberto");
+  }
+</script>
+
+</body>
+</html>
